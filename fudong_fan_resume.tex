@@ -1,0 +1,225 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSmallSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Fudong Fan} & Email: \href{mailto:fudong@umich.edu}{fudong@umich.edu}\\
+   & Mobile: +1-212-300-3816 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Michigan}{Ann Arbor, MI}
+      {Master of Engineering in Computer Science;  GPA: 3.8}{Sep. 2019 -- Apr. 2020}
+    \resumeSubheading
+      {University of Michigan}{Ann Arbor, MI}
+      {Bachelor of Engineering in Computer Science;  GPA: 3.9}{Sep. 2016 -- Apr. 2019}
+    \resumeSmallSubheading
+      {Thomas Jefferson High School for Science and Technology}{Alexandria, VA}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {Google}{New York, NY}
+    {Software Engineer - Ads, Funding Choices}{Sep. 2021 -- Present}
+    \resumeItemListStart
+      \resumeItem{Ad Manager, AdMob, AdSense Reporting}
+        {Implement user-facing metrics in Google's three sell-side ads products to support release of new features.}
+      \resumeItem{Reporting Pipeline}
+        {Deliver performance improvements to Java batch pipeline that processes millions of events per day, including
+        a refactor to perform writes in parallel instead of sequentially that reduced run time by 40\%.}
+      \resumeItem{Payments Pipeline}
+        {Designed ingestion system for greenfield project to accept payments, and implemented batch pipeline to pay publishers
+        via existing Google Payments infrastructure.}
+      \resumeItem{Integration Testing}
+        {Added integration test coverage for user-facing metrics in Ad Manager, AdMob, AdSense that enhances developer productivity
+        and increases confidence in new features.}
+      \resumeItem{Alerting}
+        {Instrumented alerts to monitor errors related to our GDPR consent management product, enabling earlier detection of bugs
+        and ensuring our product is never broken.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Bloomberg}{New York, NY}
+      {Software Engineer - Developer Experience, Build Workflow}{July 2020 -- Aug. 2021}
+      \resumeItemListStart
+        \resumeItem{Notification Service Refactor}
+          {Refactored Perl service in critical part of system to queue messages and defer
+          sending to a separate process instead of sending messages synchronously. Reduced max latency by 63\%.}
+        \resumeItem{File Server Rewrite}
+          {Add missing features and squash bugs in Go rewrite of C++ file server, taking new file server to production
+          whilst completing the deprecation of legacy file server.}
+        \resumeItem{Telemetry}
+          {Instrumented system to publish Kafka records surrounding package build lifecycle, improving 
+          visibility into build failures and providing actionable log evidence to code owners. }
+        \resumeItem{Self-Service Portal}
+          {Built React UIs in TypeScript backed by Flask endpoints to support common uses of integration build system,
+          improving usability through providing alternatives to existing command-line tools.}
+      \resumeItemListEnd
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Atlassian}{Mountain View, CA}
+      {Software Engineer Intern - Internal Platform as a Service}{May 2019 -- Aug. 2019}
+      \resumeItemListStart
+        \resumeItem{On-call Integration}
+          {Pioneered integration of internal service directory with incident management platform Opsgenie.
+          Extended React UI to enable paging developer on call without navigating away from webpage.}
+        \resumeItem{Data Ingestion}
+          {Created API in Kotlin to handle requests for ingesting on-call data into database. 
+          Designed and implemented GraphQL API in TypeScript for serving ingested data to client.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Procter \& Gamble}{Cincinnati, OH}
+      {Software Engineer Intern - Enterprise Web Applications}{May 2018 -- Aug. 2018}
+      \resumeItemListStart
+        \resumeItem{Applicant Tracking System}
+          {Analyzed functionality of existing applicant tracking system burdened by tech debt,
+          and implemented MVP for modern replacement with React, Flask, MongoDB, S3 stack.
+          MVP was productionized at end of internship and evaluated alongside
+          legacy system afterwards, received positively by recruiting staff.}
+        \resumeItem{Deprecation of Flat-File Transfer}
+          {Wrote Python library for submitting asynchronous requests to sparsely-documented vendor SOAP API,
+          enabling efficient seeding and updating of database. Previous system relied on slow and error-prone
+          flat-file database transfer for syncing local database with source-of-truth.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%   \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+   \resumeSubItem{Languages}
+    {English (Native), Japanese (perfect score on JLPT N2; will take N1), Mandarin Chinese (conversational)}
+   \resumeSubItem{Programming Languages}
+    {Java, Python, C++, TypeScript, JavaScript, SQL}
+   \resumeSubItem{Technologies}
+    {React, Flask, Node.js, Docker, Git}
+   \resumeSubItem{Knowledge areas}
+    {Batch processing, testing, debugging, schema design, concurrency}
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
